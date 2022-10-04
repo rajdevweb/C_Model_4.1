@@ -1,19 +1,39 @@
-#include <iostream>  
-using namespace std;  
-int main()  
-{  
-int a=5, b=10;      
-cout<<"Before swap a= "<<a<<" b= "<<b<<endl;      
+#include <iostream>
+using namespace std;
+class X
+{
+    float a,b,c,d,ans;
+    public:
+    void input()
+    {
+        cout<<"Enter Value A : ";
+        cin>>a;
+        cout<<"Enter Value B : ";
+        cin>>b;
+        cout<<"Enter Value C : ";
+        cin>>c;
+        cout<<"Enter Value d : ";
+        cin>>d;
+    }
+    void display()
+    {
+        ans = a+b+c+d;
+        cout<<"\nAddition : "<<ans;
 
+        ans = a-b-c-d;
+        cout<<"\nsubtracation : "<<ans;
 
-a=a*b; 
+        ans = a*b*c*d;
+        cout<<"\nmultiplication : "<<ans;
 
+        ans = a/b/c/d;
+        cout<<"\nDivision : "<<ans;
 
-b=a/b;    
-
-     a=a/b;    
-cout<<"After swap a= "<<a<<" b= "<<b<<endl;     
-
-
-return 0;  
-}  
+    }
+};
+main()
+{
+    X obj;
+    obj.input();
+    obj.display();
+}
